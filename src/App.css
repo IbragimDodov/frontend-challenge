@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+#root {
+  width: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+
+  display: flex;
+  justify-content: center;
+
+}
+
+header {
+  background-color: #2196F3;
+
+  margin-bottom: 48px;
+}
+
+.header__list {
+  max-width: 1316px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__list-item {
+  padding: 23px;
+  text-decoration: none;
+
+  list-style: none;
+  cursor: pointer;
+
+  color: #fff;
+}
+
+.header__list-item:hover {
+  background-color: #42A5F5;
+}
+
+.header__list-item.active {
+  background-color: #1E88E5;
+}
+
+main {
+  max-width: 1316px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 48px;
+}
+
+.favourites-block {
+  max-width: 1316px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 48px;
+}
+
+.cat-card {
+  position: relative;
+
+  width: 225px;
+  height: 225px;
+}
+
+.cat-card svg {
+  position: absolute;
+
+  opacity: 0;
+
+  cursor: pointer;
+
+  bottom: 28px;
+  right: 28px;
+}
+
+.cat-card:hover {
+  transform: scale(1.2);
+
+  transition: transform 0.8s;
+}
+
+.cat-card:hover svg {
+  opacity: 1;
+
+  transition: opacity 0.8s;
+  
+}
+
+.cat-card svg:hover .fullColor {
+  opacity: 1;
+  fill: #F24E1E;
+}
+
+.cat-card__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
